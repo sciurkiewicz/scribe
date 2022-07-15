@@ -1,16 +1,15 @@
 #menu {
-    margin: 0%;
-    display: flex;
-    padding: 2%;
-    align-items: center;
-    /* justify-content: center; */
-    width: 100%;
-    background-Color: rgba(255, 255, 255, 1);
-    box-shadow: 5px 5px 4px #888888;
-
+  margin: 0%;
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 5px 5px 4px #888888;
 }
 
 #menu li {
-    list-style-type: none;
-    padding: 1%;
+  list-style-type: none;
+  padding: 1%;
 }

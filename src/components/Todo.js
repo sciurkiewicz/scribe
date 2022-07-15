@@ -1,5 +1,4 @@
 import "./todo.css";
-import * as ReactDOM from "react-dom";
 import React, { useState, useEffect } from "react";
 
 // let todos = [];
@@ -15,7 +14,7 @@ import React, { useState, useEffect } from "react";
 // }
 // };
 function Todo() {
-  let [todo, setTodo] = useState(["dwdw", "dwdw", "dwdw", "dwdw"]);
+  let [todo, setTodo] = useState([]);
   console.log(todo);
 
   function pushTodo() {
@@ -24,10 +23,23 @@ function Todo() {
 
   let TodoElements = (props) => {
     if (todo.length === 0) {
-      return <div className="todoNote">PUSTO!!!</div>;
+      return (
+        <div className="todoNote">
+          <p>PUSTO!!!</p>
+        </div>
+      );
     } else {
       let listTodos = todo.map((todos) => (
-        <div className="todoNote">{todos}</div>
+        <div style={{ display: "flex" }}>
+          <div className="todoNote">{todos}</div>
+          <button
+            onClick={pushTodo}
+            className="todoButton"
+            style={{ marginTop: "1%", marginBottom: "1%" }}
+          >
+            ❌
+          </button>
+        </div>
       ));
       return <> {listTodos} </>;
     }
