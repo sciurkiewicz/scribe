@@ -1,0 +1,29 @@
+.Pomodoro {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  text-align: center;
+}
+.pomodoroButton {
+  padding: 2%;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+}
+.pomodoroButton:hover {
+  transition: 0.5s;
+  background-color: #888888;
+}
+.pomodoroButton:active {
+  background-color: white;
+  transition: 0.1s;
+}
+.pomodoroCounter {
+  font-size: 32px;
+  margin-bottom: 2%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2%;
+}

@@ -1,9 +1,12 @@
 #menu {
   margin: 0%;
+  /* position: sticky; */
   display: flex;
-  padding: 2%;
+  padding: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 5px 5px 4px #888888;
