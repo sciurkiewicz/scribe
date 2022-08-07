@@ -1,4 +1,4 @@
-import "./todo.css";
+import "./styles.css";
 import TodoElement from "./TodoElement";
 import React, { useState, useEffect } from "react";
 
@@ -11,20 +11,16 @@ function Todo() {
 
   function deleteTodo() {
     setTodos((todos) => todos.filter((_, i) => i !== 2)); //tam gdzie 2 można dać naszą wartość którą pierdolniemy z proprsa :>
-    console.log(todos);
   }
 
   return (
     <div className="Todo">
       <div style={{ display: "flex" }}>
         <input type="text" id="todoTextData" className="todoText" />
-        <button onClick={deleteTodo} className="todoButton">
-          💬
-        </button>
+        <button className="todoButton">💬</button>
       </div>
       <div className="todos" id="todoList">
-        {/* {todo} */}
-        <TodoElement />
+        <TodoElement content="pipka" />
       </div>
     </div>
   );

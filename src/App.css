@@ -1,18 +1,14 @@
 body {
-  
   /* background: rgb(9, 9, 121); */
   /* background: linear-gradient(184deg, rgba(9, 9, 121, 1) 0%, rgba(255, 119, 0, 1) 100%) fixed; */
-   background-color: lightgrey;
-    background-repeat: no-repeat;
-      background-size: auto;
-      background-attachment:fixed;
- /* background-color: #cccccc; */
-
-
-
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  /* background-color: #cccccc; */
 }
 
 * {
-  font-size: 1.60vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

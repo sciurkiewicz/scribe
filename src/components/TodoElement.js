@@ -1,9 +1,9 @@
-import "./todo.css";
+import "./styles.css";
 
-function TodoElement() {
+function TodoElement(props) {
   return (
     <div style={{ display: "flex" }}>
-      <div className="todoNote"></div>
+      <div className="todoNote">{props.content}</div>
       <button
         onClick={console.log("deleted")}
         className="todoButton"

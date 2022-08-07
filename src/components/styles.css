@@ -1,0 +1,94 @@
+#menu {
+  margin: 0%;
+  /* position: sticky; */
+  display: flex;
+  padding: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 5px 5px 4px #888888;
+}
+
+#menu li {
+  list-style-type: none;
+  padding: 1%;
+}
+
+.Pomodoro {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  text-align: center;
+}
+.pomodoroButton {
+  padding: 2%;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+}
+.pomodoroButton:hover {
+  transition: 0.5s;
+  background-color: #888888;
+}
+.pomodoroButton:active {
+  background-color: white;
+  transition: 0.1s;
+}
+.pomodoroCounter {
+  font-size: 32px;
+  margin-bottom: 2%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2%;
+}
+.Todo {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+}
+.todoText {
+  -webkit-appearance: none;
+  padding: 2%;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 5px 5px 4px #888888;
+  border-radius: 10px;
+}
+
+.todoButton {
+  padding: 2%;
+  margin-left: 2%;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+}
+.todoButton:hover {
+  transition: 0.5s;
+  background-color: #888888;
+}
+.todoButton:active {
+  background-color: white;
+  transition: 0.1s;
+}
+
+.todoNote {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px #888888;
+  word-break: break-all;
+}
+.contentWrapper {
+  margin: 2%;
+}

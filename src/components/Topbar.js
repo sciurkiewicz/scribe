@@ -1,4 +1,5 @@
-import "./topbar.css";
+import "./styles.css";
+import { Link } from "react-router-dom";
 
 function Topbar() {
   return (
@@ -7,10 +8,10 @@ function Topbar() {
         <div class="nav-wrapper">
           <ul id="menu">
             <li>
-              <a href="#home">Zaloguj Się</a>
+              <Link to="/">Main</Link>
             </li>
             <li>
-              <a href="#services">Profil</a>
+              <Link to="/pomodoro">Pomodoro</Link>
             </li>
             <li>
               <a href="#about">About</a>
