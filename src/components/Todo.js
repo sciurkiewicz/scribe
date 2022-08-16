@@ -1,26 +1,47 @@
 import "./styles.css";
-import TodoElement from "./TodoElement";
 import React, { useState, useEffect } from "react";
 
 function Todo() {
-  let [todos, setTodos] = useState(["1", "2", "3", "4", "5", "6", "7", "8"]);
+  let [todos, setTodos] = useState([]);
+
+  // function handleTodoSubmit() {}
 
   function pushTodo() {
-    setTodos([...todos, document.getElementById("todoTextData").value]); //simple value
+    setTodos([
+      ...todos,
+      {
+        content: document.getElementById("todoTextData").value,
+        id: new Date(),
+      },
+    ]); //simple value
   }
 
-  function deleteTodo() {
-    setTodos((todos) => todos.filter((_, i) => i !== 2)); //tam gdzie 2 można dać naszą wartość którą pierdolniemy z proprsa :>
+  function removeTodo(id) {
+    const newList = todos.filter((item) => item.id !== id);
+    setTodos(newList);
   }
 
   return (
     <div className="Todo">
       <div style={{ display: "flex" }}>
         <input type="text" id="todoTextData" className="todoText" />
-        <button className="todoButton">💬</button>
+        <button className="todoButton" onClick={pushTodo}>
+          💬
+        </button>
       </div>
       <div className="todos" id="todoList">
-        <TodoElement content="pipka" />
+        {todos.map((item) => (
+          <div style={{ display: "flex" }} key={todos.id}>
+            <div className="todoNote">{item.content}</div>
+            <button
+              onClick={() => removeTodo(item.id)}
+              className="todoButton"
+              style={{ marginTop: "1%", marginBottom: "1%" }}
+            >
+              ❌
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

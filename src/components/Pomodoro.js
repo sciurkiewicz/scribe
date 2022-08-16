@@ -7,6 +7,11 @@ function Pomodoro() {
   let [stopWatchState, setStopwatchState] = useState(false);
   let [status, setStatus] = useState(false);
 
+  let ring = new Audio(
+    "https://upload.wikimedia.org/wikipedia/commons/3/34/Sound_Effect_-_Door_Bell.ogg"
+  );
+  // ring.play();
+
   // function pomodoroSetup(props) {
   // return <h1>Witamy ponownie!</h1>;
   // }
