@@ -13,7 +13,9 @@ function Todo() {
         content: document.getElementById("todoTextData").value,
         id: new Date(),
       },
-    ]); //simple value
+    ]);
+    document.getElementById("todoTextData").value = "";
+    //simple value
   }
 
   function removeTodo(id) {
