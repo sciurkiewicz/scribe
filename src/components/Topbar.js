@@ -11,13 +11,10 @@ function Topbar() {
               <Link to="/">Main</Link>
             </li>
             <li>
+              <Link to="/todo">Todo</Link>
+            </li>
+            <li>
               <Link to="/pomodoro">Pomodoro</Link>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>

@@ -16,6 +16,19 @@
   list-style-type: none;
   padding: 1%;
 }
+.flex {
+  display: flex;
+}
+
+.smallMargin {
+  margin: 1%;
+}
+
+.elementsCenter {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 
 .Pomodoro {
   width: 100%;
@@ -39,14 +52,6 @@
 .pomodoroButton:active {
   background-color: white;
   transition: 0.1s;
-}
-.pomodoroCounter {
-  font-size: 32px;
-  margin-bottom: 2%;
-  background-color: white;
-  border-radius: 10px;
-  padding: 2%;
-  box-shadow: 5px 5px 4px #888888;
 }
 .Todo {
   width: 100%;
@@ -80,7 +85,7 @@
   transition: 0.1s;
 }
 
-.todoNote {
+.box {
   box-sizing: border-box;
   width: 100%;
   padding: 2%;

@@ -35,9 +35,11 @@ function Pomodoro() {
     <div className="Pomodoro">
       <div>
         {stopwatch <= 0 && (
-          <div className="pomodoroCounter">KONIEC CZASU ZRÓB PRZERWĘ!!!</div>
+          <div className="box">KONIEC CZASU ZRÓB PRZERWĘ!!!</div>
         )}
-        {stopwatch > 0 && <div className="pomodoroCounter">{stopwatch}</div>}
+        {stopwatch > 0 && (
+          <div className="box">Pozostały Czas: {stopwatch} sekund</div>
+        )}
       </div>
 
       {stopWatchState ? null : (
