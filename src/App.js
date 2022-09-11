@@ -4,22 +4,10 @@ import Todo from "./components/Todo";
 import "./App.css";
 import Pomodoro from "./components/Pomodoro";
 import Start from "./components/Start";
+import Main from "./components/Main";
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Topbar></Topbar>
-        <div className="contentWrapper">
-          <Routes>
-            <Route path="/" element={<Start />} />
-            <Route path="/todo" element={<Todo />} />
-            <Route path="/pomodoro" element={<Pomodoro />} />
-          </Routes>
-        </div>
-      </div>
-    </Router>
-  );
+  return <Main></Main>;
 }
 
 export default App;

@@ -1,15 +1,15 @@
 import "./styles.css";
 import React, { useState, useEffect } from "react";
 
-function Todo() {
-  let [todos, setTodos] = useState([]);
-
-  let [formTodo, setFormTodo] = useState();
-
-  // function handleTodoSubmit() {}
-
-  function pushTodo(e) {
-    e.preventDefault();
+function Todo({
+  todos,
+  formTodo,
+  setTodos,
+  setFormTodo,
+  completedTodos,
+  setCompletedTodo,
+}) {
+  function pushTodo() {
     if (formTodo === "") {
       alert("Task Must be Named");
     } else {
@@ -25,14 +25,31 @@ function Todo() {
       document.getElementById("todoTextData").value = "";
     }
 
-    //simple value
+    console.log(todos);
   }
 
-  function removeTodo(id) {
+  function removeTodo(id, content) {
+    const deletedTodo = id;
+    setCompletedTodo([
+      ...completedTodos,
+      { content: content, id: id, isFinished: true },
+    ]);
+    console.log(deletedTodo);
     const newList = todos.filter((item) => item.id !== id);
     setTodos(newList);
   }
-  // function completeTodo(id) {}
+  // function completeTodo(id) {
+  //   const newTodo = todos.find((item) => item.id === id);
+  //   setTodos([
+  //     ...completedTodos,
+  //     {
+  //       content: newTodo.content,
+  //       id: new Date(),
+  //       isFinished: true,
+  //     },
+  //   ]);
+  //   console.log(completedTodos);
+  // }
 
   return (
     <div className="Todo">
@@ -42,6 +59,7 @@ function Todo() {
           id="todoTextData"
           className="todoText"
           onChange={(e) => setFormTodo(e.target.value)}
+          // onKeyPress={pushTodo}
         />
         <button className="todoButton" onClick={pushTodo}>
           💬
@@ -49,17 +67,13 @@ function Todo() {
       </div>
       <div className="todos" id="todoList">
         {todos.map((item) => (
-          <div style={{ display: "flex" }} key={todos.id}>
-            <div className="box">{item.content}</div>
-            {/* <button
-              onClick={() => completeTodo(item.id)}
-              className="todoButton"
-              style={{ marginTop: "1%", marginBottom: "1%" }}
-            >
-              ✅
-            </button> */}
+          <div style={{ display: "flex" }} key={item.id}>
+            <div className="box">
+              <hr />
+              {item.content}
+            </div>
             <button
-              onClick={() => removeTodo(item.id)}
+              onClick={() => removeTodo(item.id, item.content)}
               className="todoButton"
               style={{ marginTop: "1%", marginBottom: "1%" }}
             >
