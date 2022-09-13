@@ -13,18 +13,30 @@ const getTodosFromLocalStorage = () => {
     return [];
   }
 };
+const getCompletedTodosFromLocalStorage = () => {
+  const items = JSON.parse(localStorage.getItem("completedTodos"));
+  if (items) {
+    return JSON.parse(localStorage.getItem("completedTodos"));
+  } else {
+    return [];
+  }
+};
 
 function Main() {
   const [todos, setTodos] = useState(getTodosFromLocalStorage());
   const [formTodo, setFormTodo] = useState("");
-  const [completedTodos, setCompletedTodo] = useState([]);
+  const [completedTodos, setCompletedTodo] = useState(
+    getCompletedTodosFromLocalStorage()
+  );
   const [stopwatch, setStopwatch] = useState(1500);
   const [stopWatchState, setStopwatchState] = useState(false);
-  const [status, setStatus] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
+  useEffect(() => {
+    localStorage.setItem("completedTodos", JSON.stringify(completedTodos));
+  }, [completedTodos]);
 
   return (
     <Router>
