@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/scribe/static/css/main.04cd4650.css",
+    "main.js": "/scribe/static/js/main.a5f209f3.js",
+    "static/js/787.328edf00.chunk.js": "/scribe/static/js/787.328edf00.chunk.js",
+    "index.html": "/scribe/index.html",
+    "main.04cd4650.css.map": "/scribe/static/css/main.04cd4650.css.map",
+    "main.a5f209f3.js.map": "/scribe/static/js/main.a5f209f3.js.map",
+    "787.328edf00.chunk.js.map": "/scribe/static/js/787.328edf00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04cd4650.css",
+    "static/js/main.a5f209f3.js"
+  ]
+}
