@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/scribe/static/css/main.04cd4650.css",
-    "main.js": "/scribe/static/js/main.a5f209f3.js",
+    "main.css": "/scribe/static/css/main.6b6c32be.css",
+    "main.js": "/scribe/static/js/main.c1caa22c.js",
     "static/js/787.328edf00.chunk.js": "/scribe/static/js/787.328edf00.chunk.js",
     "index.html": "/scribe/index.html",
-    "main.04cd4650.css.map": "/scribe/static/css/main.04cd4650.css.map",
-    "main.a5f209f3.js.map": "/scribe/static/js/main.a5f209f3.js.map",
+    "main.6b6c32be.css.map": "/scribe/static/css/main.6b6c32be.css.map",
+    "main.c1caa22c.js.map": "/scribe/static/js/main.c1caa22c.js.map",
     "787.328edf00.chunk.js.map": "/scribe/static/js/787.328edf00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.04cd4650.css",
-    "static/js/main.a5f209f3.js"
+    "static/css/main.6b6c32be.css",
+    "static/js/main.c1caa22c.js"
   ]
 }
