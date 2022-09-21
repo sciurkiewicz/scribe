@@ -38,6 +38,12 @@ function Todo({
     const newList = todos.filter((item) => item.id !== id);
     setTodos(newList);
   }
+
+  const handlePress = (event) => {
+    if (event.key === "Enter") {
+      pushTodo();
+    }
+  };
   // function completeTodo(id) {
   //   const newTodo = todos.find((item) => item.id === id);
   //   setTodos([
@@ -59,13 +65,18 @@ function Todo({
           id="todoTextData"
           className="todoText"
           onChange={(e) => setFormTodo(e.target.value)}
-          // onKeyPress={pushTodo}
+          onKeyPress={handlePress}
         />
         <button className="todoButton" onClick={pushTodo}>
           💬
         </button>
       </div>
       <div className="todos" id="todoList">
+        {todos.length === 0 && (
+          <div className="box elementsCenter">
+            <h1>There are no notes</h1>
+          </div>
+        )}
         {todos.map((item) => (
           <div style={{ display: "flex" }} key={item.id}>
             <div className="box">

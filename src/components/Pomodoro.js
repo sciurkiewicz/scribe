@@ -14,9 +14,9 @@ function Pomodoro({
   // function pomodoroAfter(props) {
   // return <h1>Proszę się zarejestrować.</h1>;
   // }
-  useEffect(() => {
-    document.title = stopwatch;
-  });
+  // useEffect(() => {
+  // document.title = stopwatch;
+  // });
   const handleClick = () => {
     setStopwatchState(true);
     setInterval(() => {
@@ -25,7 +25,7 @@ function Pomodoro({
   };
   const handleReset = () => {
     setStopwatchState(true);
-    setStopwatch(9);
+    setStopwatch(1500);
   };
 
   return (
@@ -37,13 +37,15 @@ function Pomodoro({
 
         {stopwatch > 0 && (
           <div>
-            <div className="box">Pozostały czas pracy: {stopwatch} sekund</div>
+            Pozostały czas pracy: {stopwatch} sekund
             <progress
               id="file"
               value={stopwatch}
               max="1500"
               className="progress"
-            ></progress>
+            >
+              dsdsds
+            </progress>
           </div>
         )}
       </div>

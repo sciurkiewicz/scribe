@@ -31,6 +31,8 @@ function Main() {
   const [stopwatch, setStopwatch] = useState(1500);
   const [stopWatchState, setStopwatchState] = useState(false);
 
+  const [quickNote, setQuickNote] = useState("");
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -46,7 +48,14 @@ function Main() {
           <Routes>
             <Route
               path="/"
-              element={<Start completedTodos={completedTodos} />}
+              element={
+                <Start
+                  completedTodos={completedTodos}
+                  setCompletedTodo={setCompletedTodo}
+                  quickNote={quickNote}
+                  setQuickNote={setQuickNote}
+                />
+              }
             />
             <Route
               path="/todo"
